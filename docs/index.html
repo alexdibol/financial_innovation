@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Financial Innovation - Discovery, Implementation, and Improvement</title>
+
+<title>Readings in Financial Innovation</title>
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&display=swap');
 
 :root {
   --ink: #0a0a0a;
@@ -21,8 +23,16 @@
   --rule-heavy: rgba(10,10,10,0.38);
 }
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--paper);
   color: var(--ink);
@@ -30,9 +40,13 @@ body {
   font-weight: 300;
   overflow-x: hidden;
 }
-a { color: inherit; }
+
+a {
+  color: inherit;
+}
 
 /* MASTHEAD */
+
 .masthead {
   border-bottom: 3px double var(--rule-heavy);
   padding: 18px 60px;
@@ -44,11 +58,33 @@ a { color: inherit; }
   top: 0;
   z-index: 100;
 }
-.masthead-date { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.45; }
-.masthead-title { font-family: 'Playfair Display', Georgia, serif; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 400; }
-.masthead-tag { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase; }
+
+.masthead-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.45;
+}
+
+.masthead-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.masthead-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
 
 /* HERO */
+
 .hero {
   padding: 80px 60px 60px;
   border-bottom: 1px solid var(--rule-heavy);
@@ -57,497 +93,955 @@ a { color: inherit; }
   position: relative;
   overflow: hidden;
 }
+
 .hero::after {
   content: '';
   position: absolute;
-  right: -60px; top: 60px;
-  width: 420px; height: 420px;
+  right: -60px;
+  top: 60px;
+  width: 420px;
+  height: 420px;
   border: 1px solid rgba(242,240,234,0.08);
   border-radius: 50%;
   pointer-events: none;
 }
+
 .hero::before {
   content: '';
   position: absolute;
-  right: 60px; top: 130px;
-  width: 240px; height: 240px;
+  right: 60px;
+  top: 130px;
+  width: 240px;
+  height: 240px;
   border: 1px solid rgba(242,240,234,0.06);
   border-radius: 50%;
   pointer-events: none;
 }
+
 .hero-kicker {
   font-family: 'DM Mono', monospace;
-  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   color: var(--gold-light);
   margin-bottom: 24px;
-  display: flex; align-items: center; gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
-.hero-kicker::before { content: ''; display: block; width: 40px; height: 1px; background: var(--gold-light); }
+
+.hero-kicker::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--gold-light);
+}
+
 .hero-headline {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(46px, 6.5vw, 88px);
   line-height: 0.95;
   font-weight: 900;
   letter-spacing: -0.02em;
-  max-width: 1000px;
+  max-width: 980px;
   margin-bottom: 8px;
 }
-.hero-headline em { font-style: italic; color: var(--gold-light); }
+
+.hero-headline em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
 .hero-sub {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(16px, 2.2vw, 24px);
-  font-style: italic; font-weight: 400;
-  color: rgba(242,240,234,0.55);
-  max-width: 860px;
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(242,240,234,0.62);
+  max-width: 820px;
   margin: 28px 0 48px;
   line-height: 1.5;
 }
-.hero-meta { display: flex; gap: 48px; align-items: flex-start; flex-wrap: wrap; margin-bottom: 44px; }
-.meta-item { display: flex; flex-direction: column; gap: 4px; }
-.meta-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.4; }
-.meta-value { font-family: 'Playfair Display', Georgia, serif; font-size: 17px; font-weight: 700; }
-.meta-value.em { color: var(--gold-light); font-size: 20px; }
-.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+.hero-meta {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meta-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+
+.meta-value {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.meta-value.em {
+  color: var(--gold-light);
+  font-size: 20px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
 
 /* BUTTONS */
-.btn-primary, .btn-secondary {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-family: 'DM Mono', monospace; font-size: 12px;
-  letter-spacing: 0.14em; text-transform: uppercase;
-  padding: 16px 28px; text-decoration: none;
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 16px 28px;
+  text-decoration: none;
   transition: all 0.2s;
 }
-.btn-primary { background: var(--gold); color: var(--paper); border: 2px solid var(--gold); }
-.btn-primary:hover { background: var(--gold-light); border-color: var(--gold-light); transform: translateY(-2px); }
-.btn-secondary { background: transparent; color: var(--paper); border: 2px solid rgba(242,240,234,0.4); }
-.btn-secondary:hover { background: rgba(242,240,234,0.08); transform: translateY(-2px); }
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--paper);
+  border: 2px solid var(--gold);
+}
+
+.btn-primary:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--paper);
+  border: 2px solid rgba(242,240,234,0.4);
+}
+
+.btn-secondary:hover {
+  background: rgba(242,240,234,0.08);
+  transform: translateY(-2px);
+}
+
+/* SECTIONS */
+
+section {
+  padding: 70px 60px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(34px, 4.5vw, 62px);
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  max-width: 900px;
+  margin-bottom: 28px;
+}
+
+.section-intro {
+  font-size: 18px;
+  line-height: 1.75;
+  max-width: 900px;
+  color: rgba(10,10,10,0.72);
+}
 
 /* PULL QUOTE */
+
 .pull-quote-section {
-  display: grid; grid-template-columns: 1fr 2px 1fr;
-  border-bottom: 1px solid var(--rule-heavy);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  align-items: start;
+  background: var(--cream);
 }
-.pull-quote-left { padding: 60px; background: var(--cream); }
-.pull-quote-divider { background: var(--rule-heavy); }
-.pull-quote-right { padding: 60px; }
-blockquote {
+
+.pull-quote {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(17px, 2vw, 25px);
-  font-style: italic; line-height: 1.45;
+  font-size: clamp(28px, 4vw, 54px);
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  border-left: 4px solid var(--gold);
+  padding-left: 28px;
 }
-blockquote cite {
-  display: block; font-family: 'DM Mono', monospace;
-  font-size: 11px; letter-spacing: 0.12em;
-  font-style: normal; margin-top: 20px;
-  opacity: 0.5; text-transform: uppercase;
+
+.pull-copy {
+  font-size: 18px;
+  line-height: 1.75;
+  color: rgba(10,10,10,0.72);
 }
-.right-intro { font-size: 15px; line-height: 1.8; color: rgba(10,10,10,0.72); max-width: 580px; }
-.right-intro strong { color: var(--ink); font-weight: 500; }
 
-/* SECTION HEADERS */
-.section-header { display: flex; align-items: center; gap: 20px; margin-bottom: 48px; }
-.section-number { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.15em; color: var(--gold); text-transform: uppercase; white-space: nowrap; }
-.section-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(26px, 3.5vw, 42px); font-weight: 900; letter-spacing: -0.02em; line-height: 1; white-space: nowrap; }
-.section-rule { flex: 1; height: 1px; background: var(--rule-heavy); }
-
-/* THESIS */
-.thesis-section { padding: 80px 60px; border-bottom: 1px solid var(--rule-heavy); }
-.thesis-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; border: 1px solid var(--rule-heavy); margin-top: 48px; }
-.thesis-item { padding: 40px 34px; border-right: 1px solid var(--rule-heavy); }
-.thesis-item:last-child { border-right: none; }
-.thesis-item:hover { background: var(--cream); }
-.thesis-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--rule); }
-.thesis-title { font-family: 'Playfair Display', Georgia, serif; font-size: 19px; font-weight: 700; margin-bottom: 14px; line-height: 1.25; }
-.thesis-body { font-size: 14px; line-height: 1.78; color: rgba(10,10,10,0.65); }
-
-/* PARTS SECTION */
-.parts-section { padding: 80px 60px; background: var(--dark); color: var(--paper); border-bottom: 3px double rgba(242,240,234,0.12); }
-.parts-section .section-title { color: var(--paper); }
-.parts-section .section-number { color: var(--gold-light); }
-.parts-section .section-rule { background: rgba(242,240,234,0.15); }
-.parts-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 0; border: 1px solid rgba(242,240,234,0.1); margin-top: 48px; }
-.part-card {
-  padding: 44px 36px;
-  border-right: 1px solid rgba(242,240,234,0.1);
-  border-bottom: 1px solid rgba(242,240,234,0.1);
-  text-decoration: none; color: var(--paper);
-  transition: background 0.25s;
-  display: block;
+.pull-copy p + p {
+  margin-top: 22px;
 }
-.part-card:nth-child(2n) { border-right: none; }
-.part-card:hover { background: rgba(242,240,234,0.04); }
-.part-num { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; color: var(--gold-light); text-transform: uppercase; margin-bottom: 10px; }
-.part-name { font-family: 'Playfair Display', Georgia, serif; font-size: 21px; font-weight: 700; margin-bottom: 16px; line-height: 1.2; }
-.part-desc { font-size: 14px; line-height: 1.75; color: rgba(242,240,234,0.6); margin-bottom: 20px; }
-.part-chapters { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 16px; }
-.chapter-list { list-style: none; padding: 0; }
-.chapter-list li { font-size: 13px; line-height: 1.65; color: rgba(242,240,234,0.5); padding: 4px 0; border-bottom: 1px solid rgba(242,240,234,0.06); }
-.chapter-list li:last-child { border-bottom: none; }
-.part-link {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-family: 'DM Mono', monospace; font-size: 11px;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--gold-light); text-decoration: none;
-  border-bottom: 1px solid var(--gold-light);
-  padding-bottom: 2px; margin-top: 20px;
-  transition: opacity 0.2s;
-}
-.part-link:hover { opacity: 0.65; }
 
-/* WHAT'S INSIDE */
-.inside-section { padding: 80px 60px; border-bottom: 1px solid var(--rule-heavy); background: var(--cream); }
-.inside-grid {
-  display: grid; grid-template-columns: repeat(4,1fr);
-  border-top: 2px solid var(--ink);
+/* STATS */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid var(--rule-heavy);
   border-left: 1px solid var(--rule-heavy);
-  margin-top: 48px;
+  margin-top: 40px;
 }
-.inside-item { padding: 32px 24px; border-right: 1px solid var(--rule-heavy); border-bottom: 1px solid var(--rule-heavy); }
-.inside-icon { font-size: 24px; margin-bottom: 12px; }
-.inside-count { font-family: 'Playfair Display', Georgia, serif; font-size: 42px; font-weight: 900; line-height: 1; margin-bottom: 8px; }
-.inside-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(10,10,10,0.5); }
 
-/* FOR WHOM */
-.for-whom { padding: 80px 60px; border-bottom: 1px solid var(--rule-heavy); }
-.profiles-grid { display: grid; grid-template-columns: repeat(3,1fr); border: 1px solid var(--rule-heavy); margin-top: 48px; }
-.profile-card { padding: 38px 32px; border-right: 1px solid var(--rule-heavy); position: relative; transition: background 0.25s; }
-.profile-card:last-child { border-right: none; }
-.profile-card:hover { background: var(--cream); }
-.profile-number { font-family: 'Playfair Display', Georgia, serif; font-size: 68px; font-weight: 900; color: rgba(10,10,10,0.05); line-height: 1; position: absolute; top: 18px; right: 20px; }
-.profile-role { font-family: 'Playfair Display', Georgia, serif; font-size: 18px; font-weight: 700; margin-bottom: 14px; line-height: 1.25; }
-.profile-desc { font-size: 14px; line-height: 1.75; color: rgba(10,10,10,0.62); }
+.stat {
+  padding: 30px 24px;
+  border-right: 1px solid var(--rule-heavy);
+  border-bottom: 1px solid var(--rule-heavy);
+  background: rgba(255,255,255,0.22);
+}
+
+.stat-number {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--gold);
+}
+
+.stat-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-top: 10px;
+  opacity: 0.6;
+}
+
+/* PART CARDS */
+
+.parts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 46px;
+}
+
+.part-card {
+  border: 1px solid var(--rule-heavy);
+  background: rgba(255,255,255,0.24);
+  padding: 34px;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.22s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.part-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 100%;
+  background: var(--gold);
+  opacity: 0.75;
+}
+
+.part-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.38);
+  box-shadow: 0 18px 40px rgba(10,10,10,0.08);
+}
+
+.part-number {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.part-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 31px;
+  font-weight: 900;
+  line-height: 1.05;
+  margin-bottom: 18px;
+}
+
+.part-description {
+  font-size: 16px;
+  line-height: 1.65;
+  color: rgba(10,10,10,0.68);
+  margin-bottom: 24px;
+}
+
+.chapter-list {
+  list-style: none;
+  margin-top: auto;
+  border-top: 1px solid var(--rule);
+  padding-top: 18px;
+}
+
+.chapter-list li {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  line-height: 1.55;
+  letter-spacing: 0.02em;
+  color: rgba(10,10,10,0.68);
+  padding: 5px 0;
+}
+
+/* LEARNING MODEL */
+
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  margin-top: 42px;
+}
+
+.layer-card {
+  border: 1px solid var(--rule-heavy);
+  padding: 26px;
+  background: var(--dark);
+  color: var(--paper);
+}
+
+.layer-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 14px;
+}
+
+.layer-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.layer-copy {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(242,240,234,0.66);
+}
+
+/* PATHWAYS */
+
+.pathways {
+  background: var(--cream);
+}
+
+.pathways-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 42px;
+}
+
+.pathway-card {
+  border-top: 3px double var(--rule-heavy);
+  padding: 28px 0 0;
+}
+
+.pathway-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 26px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.pathway-copy {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(10,10,10,0.7);
+}
+
+/* GOVERNANCE */
+
+.governance-box {
+  border: 3px double var(--rule-heavy);
+  padding: 42px;
+  margin-top: 42px;
+  background: rgba(255,255,255,0.28);
+}
+
+.governance-box h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.governance-box p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: rgba(10,10,10,0.72);
+}
+
+.governance-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.gov-item {
+  border-left: 3px solid var(--gold);
+  padding-left: 18px;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  color: rgba(10,10,10,0.72);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
 
 /* CTA */
-.cta-section {
-  padding: 100px 60px; text-align: center;
-  border-bottom: 3px double var(--rule-heavy);
-  background: var(--dark); color: var(--paper);
-  position: relative; overflow: hidden;
+
+.cta {
+  background: var(--dark);
+  color: var(--paper);
+  text-align: center;
+  padding: 90px 60px;
 }
-.cta-section::before {
-  content: 'INNOVATE';
-  position: absolute;
+
+.cta-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 240px; font-weight: 900;
-  color: rgba(242,240,234,0.03);
-  left: 50%; top: 50%;
-  transform: translate(-50%,-50%);
-  pointer-events: none; white-space: nowrap;
+  font-size: clamp(38px, 5vw, 72px);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 22px;
 }
-.cta-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 24px; }
-.cta-headline { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(30px, 4.5vw, 54px); font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; max-width: 840px; margin: 0 auto 16px; }
-.cta-sub { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 19px; color: rgba(242,240,234,0.5); margin-bottom: 44px; }
-.cta-buttons { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+
+.cta-copy {
+  max-width: 760px;
+  margin: 0 auto 38px;
+  font-size: 18px;
+  line-height: 1.75;
+  color: rgba(242,240,234,0.66);
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
 
 /* FOOTER */
-footer { padding: 40px 60px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
-.footer-brand { font-family: 'Playfair Display', Georgia, serif; font-size: 14px; font-weight: 700; }
-.footer-note { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: rgba(10,10,10,0.38); text-align: center; }
-.footer-link { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); text-decoration: none; }
-.footer-link:hover { text-decoration: underline; }
 
-@media (max-width: 960px) {
-  .masthead, .hero, .thesis-section, .parts-section, .inside-section, .for-whom, .cta-section, footer { padding-left: 24px; padding-right: 24px; }
-  .masthead-date { display: none; }
-  .hero::before, .hero::after { display: none; }
-  .pull-quote-section { grid-template-columns: 1fr; }
-  .pull-quote-divider { display: none; }
-  .pull-quote-left, .pull-quote-right { padding: 40px 24px; }
-  .thesis-grid, .parts-grid, .profiles-grid { grid-template-columns: 1fr; }
-  .thesis-item, .part-card, .profile-card { border-right: none; border-bottom: 1px solid var(--rule-heavy); }
-  .inside-grid { grid-template-columns: repeat(2,1fr); }
-  .section-title { white-space: normal; font-size: clamp(24px, 5vw, 36px); }
-  footer { flex-direction: column; text-align: center; }
+.footer {
+  padding: 36px 60px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 3px double var(--rule-heavy);
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(10,10,10,0.5);
 }
 
-@media (max-width: 640px) {
-  .inside-grid { grid-template-columns: 1fr; }
+/* RESPONSIVE */
+
+@media (max-width: 980px) {
+  .masthead {
+    padding: 16px 24px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hero,
+  section,
+  .cta {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .pull-quote-section {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .parts-grid,
+  .pathways-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .learning-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .governance-list {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 28px;
+  }
+}
+
+@media (max-width: 520px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-headline {
+    font-size: 44px;
+  }
+
+  .hero-meta {
+    gap: 24px;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <header class="masthead">
-  <span class="masthead-date">Academic Year 2026 · Six Parts</span>
-  <span class="masthead-title">Financial Innovation</span>
-  <span class="masthead-tag">PhD Level · Open Access</span>
+  <div class="masthead-date">May 4, 2026</div>
+  <div class="masthead-title">Readings in Financial Innovation</div>
+  <div class="masthead-tag">Master of Finance · Cambridge</div>
 </header>
 
+<main>
+
 <section class="hero">
-  <div class="hero-kicker">A Guided Expedition Through Discovery, Implementation & Improvement</div>
-  <h1 class="hero-headline">Financial Innovation<br>Is Not <em>Novelty.</em><br>It Is Organized<br><em>Ingenuity.</em></h1>
-  <p class="hero-sub">A complete, cumulative exploration of how financial ideas arise, become necessary, are implemented in institutions and technologies, and are improved under the pressure of markets, regulation, crisis, and human need.</p>
+  <div class="hero-kicker">A Course of the Master of Finance Program</div>
+
+  <h1 class="hero-headline">
+    Readings in <em>Financial Innovation</em>
+  </h1>
+
+  <p class="hero-sub">
+    A guided expedition through the institutional, technological, legal,
+    mathematical, and moral evolution of finance — from trust, contracts,
+    incomplete markets, payments, blockchain, and artificial intelligence to
+    the global forces reshaping financial civilization.
+  </p>
+
   <div class="hero-meta">
-    <div class="meta-item">
-      <span class="meta-label">Chapters</span>
-      <span class="meta-value em">41</span>
-    </div>
-    <div class="meta-item">
-      <span class="meta-label">Parts</span>
-      <span class="meta-value">6</span>
-    </div>
-    <div class="meta-item">
-      <span class="meta-label">Teaching Method</span>
-      <span class="meta-value">Multi-Modal</span>
-    </div>
-    <div class="meta-item">
-      <span class="meta-label">Orientation</span>
-      <span class="meta-value">Discovery · Implementation · Improvement</span>
-    </div>
     <div class="meta-item">
       <span class="meta-label">Author</span>
       <span class="meta-value">Alejandro Reynoso</span>
     </div>
+
+    <div class="meta-item">
+      <span class="meta-label">Program</span>
+      <span class="meta-value">Judge Business School, Cambridge</span>
+    </div>
+
+    <div class="meta-item">
+      <span class="meta-label">Structure</span>
+      <span class="meta-value em">49 Chapters · 6 Parts</span>
+    </div>
+
+    <div class="meta-item">
+      <span class="meta-label">Pedagogy</span>
+      <span class="meta-value">Book · Papers · Decks · Podcasts · Videos</span>
+    </div>
   </div>
+
   <div class="hero-actions">
-    <a href="#" class="btn-primary">Access Course Materials →</a>
-    <a href="#" class="btn-secondary">View Syllabus</a>
+    <a class="btn-primary" href="https://github.com/alexdibol/books/releases/download/book-financial_innovation-v01/BOOK_FINANCIAL_INNOVATION_IN_EMERGING_MARKETS.pdf" target="_blank" rel="noopener">
+      Download Book →
+    </a>
+
+    <a class="btn-secondary" href="#course-map">
+      Explore Course Map
+    </a>
   </div>
 </section>
 
 <section class="pull-quote-section">
-  <div class="pull-quote-left">
-    <blockquote>
-      "Financial innovation is never only technical. It is discovery, implementation, and improvement, carried forward by human ingenuity and tested in both developed and developing nations."
-      <cite>— From the Introduction</cite>
-    </blockquote>
+  <div class="pull-quote">
+    Finance is not merely a technical system. It is an architecture of trust, value, risk, information, and responsibility.
   </div>
-  <div class="pull-quote-divider"></div>
-  <div class="pull-quote-right">
-    <p class="right-intro">
-      This volume is conceived as a <strong>guided expedition</strong> through the intellectual, institutional, and technological history of financial innovation. It is written for readers who want more than a list of instruments.<br><br>
-      Its purpose is to show <strong>how financial ideas arise, why they become necessary, how they are implemented, and how they are improved</strong> under the pressure of markets, regulation, crisis, and human need.<br><br>
-      The aim is not only to explain change, but to illuminate the deeper logic of change: how trust is organized, how incentives are aligned, how access is widened, and how ingenuity enlarges economic possibility.
+
+  <div class="pull-copy">
+    <p>
+      This course treats financial innovation not as a catalogue of fashionable instruments,
+      but as a disciplined process through which societies discover, implement, govern,
+      and improve new ways of coordinating capital under uncertainty.
+    </p>
+
+    <p>
+      The latest version expands the course into a richer 49-chapter intellectual map.
+      It begins with institutional architecture and legal design, moves through incomplete
+      markets and payment systems, advances into cryptography and tokenization, confronts
+      artificial intelligence as infrastructure, and concludes with the global megatrends
+      that will shape finance in the decades ahead.
     </p>
   </div>
 </section>
 
-<section class="thesis-section">
-  <div class="section-header">
-    <span class="section-number">§ 01</span>
-    <h2 class="section-title">The Deeper Logic of Change</h2>
-    <div class="section-rule"></div>
-  </div>
-  <div class="thesis-grid">
-    <div class="thesis-item">
-      <div class="thesis-label">Discovery</div>
-      <div class="thesis-title">How Ideas Arise</div>
-      <p class="thesis-body">Genuine innovation begins with conceptual leaps: new ways to index value, structure platforms, route payments, verify transactions, train models, or govern networks. But discovery alone is not enough—it must withstand the test of implementation.</p>
+<section>
+  <div class="section-label">§ 01 · Course at a Glance</div>
+
+  <h2 class="section-title">
+    A complete map of financial invention under responsibility.
+  </h2>
+
+  <p class="section-intro">
+    The book moves from institutions to incomplete markets, from trading and settlement
+    infrastructure to mathematically driven systems, from artificial intelligence to the
+    world’s largest structural transformations. Its central question is not simply what
+    finance can invent, but what kind of judgment should govern financial power.
+  </p>
+
+  <div class="stats-grid">
+    <div class="stat">
+      <div class="stat-number">49</div>
+      <div class="stat-label">Chapters</div>
     </div>
-    <div class="thesis-item">
-      <div class="thesis-label">Implementation</div>
-      <div class="thesis-title">From Concept to Institution</div>
-      <p class="thesis-body">A beautiful design that cannot interoperate, cannot be supervised, cannot scale, or cannot survive stress is not yet a financial innovation. Implementation forces ideas back into the world of institutions, law, infrastructure, and human behavior.</p>
+
+    <div class="stat">
+      <div class="stat-number">6</div>
+      <div class="stat-label">Major Parts</div>
     </div>
-    <div class="thesis-item">
-      <div class="thesis-label">Improvement</div>
-      <div class="thesis-title">Learning from Stress</div>
-      <p class="thesis-body">Once an innovation has been discovered and implemented, new frictions appear. Finance advances by revising the consequences of its own success—testing ideas against fraud, volatility, inequality, and environmental limits.</p>
+
+    <div class="stat">
+      <div class="stat-number">5</div>
+      <div class="stat-label">Resource Layers</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-number">1</div>
+      <div class="stat-label">Master Resource Index</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-number">∞</div>
+      <div class="stat-label">Depth Gradient</div>
     </div>
   </div>
 </section>
 
-<section class="parts-section">
-  <div class="section-header">
-    <span class="section-number">§ 02</span>
-    <h2 class="section-title">Six Parts</h2>
-    <div class="section-rule"></div>
-  </div>
+<section id="course-map">
+  <div class="section-label">§ 02 · Six-Part Architecture</div>
+
+  <h2 class="section-title">
+    From institutional design to global megatrends.
+  </h2>
+
+  <p class="section-intro">
+    The course is organized around six cumulative parts. Each part asks how financial
+    innovation emerges, how it becomes institutionalized, what risks it creates, and how
+    it must be improved under pressure.
+  </p>
+
   <div class="parts-grid">
 
-    <a class="part-card" href="#">
-      <div class="part-num">Part I</div>
-      <div class="part-name">The Architecture of Financial Innovation</div>
-      <p class="part-desc">Establishing first principles: genuine innovation is the disciplined creation of new ways to organize trust, capital, information, and incentives. Durable advance comes when institutions connect mission to process, rules to creativity, and ambition to responsibility.</p>
-      <div class="part-chapters">3 Chapters</div>
+    <article class="part-card">
+      <div class="part-number">Part I · Chapters 1–4</div>
+      <h3 class="part-title">The Architecture of Financial Innovation</h3>
+      <p class="part-description">
+        Establishes that durable innovation depends on institutions, legal design,
+        organizational purpose, governance, and strategic coherence.
+      </p>
       <ul class="chapter-list">
-        <li>Frameworks for Financial Innovation</li>
-        <li>Institutional Engineering of Global Capital</li>
-        <li>The Architecture of Invention</li>
+        <li>01 · Frameworks for Financial Innovation</li>
+        <li>02 · Innovation in Finance is always about Institutions</li>
+        <li>03 · Where ideas come from</li>
+        <li>04 · ISDA: Legal Architecture as Financial Innovation</li>
       </ul>
-      <span class="part-link">Explore Part I →</span>
-    </a>
+    </article>
 
-    <a class="part-card" href="#">
-      <div class="part-num">Part II</div>
-      <div class="part-name">Financial Innovation in Incomplete Markets</div>
-      <p class="part-desc">Where innovation becomes most urgent because existing arrangements leave people partially served or entirely excluded. From inflation indexation to microfinance, these chapters show implementation means translating insight into systems that work under volatility, scarcity, and complexity.</p>
-      <div class="part-chapters">5 Chapters</div>
+    <article class="part-card">
+      <div class="part-number">Part II · Chapters 5–13</div>
+      <h3 class="part-title">Financial Innovation in Incomplete Markets</h3>
+      <p class="part-description">
+        Examines how innovation responds to exclusion, inflation, weak infrastructure,
+        limited documentation, social enterprise, remittances, and fragile trust.
+      </p>
       <ul class="chapter-list">
-        <li>The Mechanics of Inflation Indexation</li>
-        <li>The Architecture for Public Market Access</li>
-        <li>AI-Driven IPO Prospectus Automation</li>
-        <li>Grameen Bank: Microfinance and Social Business</li>
-        <li>Design of an A2A-Based AI Financial Platform</li>
+        <li>05 · The Mechanics of Inflation Indexation</li>
+        <li>06 · Agentic Policy Design in Emerging Markets</li>
+        <li>07 · Asset Securitization in Incomplete Markets</li>
+        <li>08 · AI-Driven IPO Prospectus Automation</li>
+        <li>09–13 · Social Enterprise, Grameen, Inclusion, Remittances, Strategic Patience</li>
       </ul>
-      <span class="part-link">Explore Part II →</span>
-    </a>
+    </article>
 
-    <a class="part-card" href="#">
-      <div class="part-num">Part III</div>
-      <div class="part-name">Trading and Settlement: Payments System</div>
-      <p class="part-desc">The infrastructures that link markets and lives at scale. From global equity integration to mobile money, SWIFT to high-frequency trading, these hidden architectures represent some of humanity's most consequential achievements—most impactful when they become invisible.</p>
-      <div class="part-chapters">8 Chapters</div>
+    <article class="part-card">
+      <div class="part-number">Part III · Chapters 14–24</div>
+      <h3 class="part-title">Trading and Settlement: Payments System</h3>
+      <p class="part-description">
+        Studies the hidden rails of financial life: depositary receipts, telecom payments,
+        digital trust, SWIFT, hedge fund design, market microstructure, credit cards,
+        dark pools, and online payments.
+      </p>
       <ul class="chapter-list">
-        <li>The Architecture of Global Equity Integration</li>
-        <li>M-PESA from Telecom to Payments</li>
-        <li>The SWIFT Payment System</li>
-        <li>High-Frequency Trading</li>
-        <li>Game Theory and Algorithmic Trading</li>
-        <li>Credit Cards as Global Payments</li>
-        <li>Dark Pools and Hidden Liquidity</li>
-        <li>Online Payment Systems</li>
+        <li>14 · The American Depositary Receipts</li>
+        <li>15 · M-PESA from Telecom to Payments</li>
+        <li>16 · PayPal and Digital Trust</li>
+        <li>17 · The SWIFT Payment System</li>
+        <li>18–24 · Hedge Funds, HFT, Game Theory, Credit Cards, Dark Pools, Online Payments</li>
       </ul>
-      <span class="part-link">Explore Part III →</span>
-    </a>
+    </article>
 
-    <a class="part-card" href="#">
-      <div class="part-num">Part IV</div>
-      <div class="part-name">Math Driven Innovation</div>
-      <p class="part-desc">Where abstraction becomes infrastructure. Code becomes a new basis for trust, verification, and coordination. From cryptographic architecture to blockchain, tokenization to Web3, these chapters expand the design space of what finance might become.</p>
-      <div class="part-chapters">7 Chapters</div>
+    <article class="part-card">
+      <div class="part-number">Part IV · Chapters 25–31</div>
+      <h3 class="part-title">Math Driven Innovation</h3>
+      <p class="part-description">
+        Explores cryptographic architecture, Bitcoin, blockchain infrastructure,
+        tokenization, environmental value, and Web3 as a possible re-architecture of finance.
+      </p>
       <ul class="chapter-list">
-        <li>Cryptographic Architecture as Innovation</li>
-        <li>The Origin of Bitcoin</li>
-        <li>Blockchain Architecture</li>
-        <li>Blockchain Infrastructure</li>
-        <li>Asset Tokenization</li>
-        <li>AI-Mazonia NaturePass</li>
-        <li>Web3 as Financial Re-Architecture</li>
+        <li>25 · Cryptographic Architecture as Innovation</li>
+        <li>26 · The Origin of Bitcoin</li>
+        <li>27 · Blockchain Architecture</li>
+        <li>28 · Blockchain Infrastructure</li>
+        <li>29–31 · Tokenization, AI-Mazonia NaturePass, Web3</li>
       </ul>
-      <span class="part-link">Explore Part IV →</span>
-    </a>
+    </article>
 
-    <a class="part-card" href="#">
-      <div class="part-num">Part V</div>
-      <div class="part-name">The Advent of AI</div>
-      <p class="part-desc">Intelligence at scale reshapes analysis, prediction, and automation. From computational infrastructure to workflow design, cyber risk to labor disruption, these chapters show that improvement in the AI age must mean governed capability—not capability alone.</p>
-      <div class="part-chapters">9 Chapters</div>
+    <article class="part-card">
+      <div class="part-number">Part V · Chapters 32–40</div>
+      <h3 class="part-title">The Advent of AI</h3>
+      <p class="part-description">
+        Treats artificial intelligence as business infrastructure, computational stack,
+        workflow architecture, cyber-strategic risk, venture discipline, macroeconomic force,
+        labor shock, and moral test.
+      </p>
       <ul class="chapter-list">
-        <li>Accelerated Intelligence</li>
-        <li>CPUs, GPUs, and AI Factories</li>
-        <li>From Self-Driving Cars to AI Finance</li>
-        <li>The New Operating Grammar of AI Systems</li>
-        <li>Frontier Cyber-Strategic Risk</li>
-        <li>Why AI Ventures Fail</li>
-        <li>The Macroeconomics of AI</li>
-        <li>The AI Layoff Trap</li>
-        <li>AI and the Moral Condition of Society</li>
+        <li>32 · AI as Business Infrastructure</li>
+        <li>33 · CPUs, GPUs, and AI Factories</li>
+        <li>34 · From Self-Driving Cars to AI Finance</li>
+        <li>35 · The New Operating Grammar of AI Systems</li>
+        <li>36–40 · Cyber Risk, Venture Failure, Macroeconomics, Layoffs, Moral Society</li>
       </ul>
-      <span class="part-link">Explore Part V →</span>
-    </a>
+    </article>
 
-    <a class="part-card" href="#">
-      <div class="part-num">Part VI</div>
-      <div class="part-name">World Mega Trends and Innovation</div>
-      <p class="part-desc">The world conditions within which all innovation must now operate. From polycrisis to demographics, pensions to superintelligence, sustainability to geopolitical rebalancing. Finance confronts obligations not only to efficiency, but to resilience and the habitability of the future.</p>
-      <div class="part-chapters">9 Chapters</div>
+    <article class="part-card">
+      <div class="part-number">Part VI · Chapters 41–49</div>
+      <h3 class="part-title">World Mega Trends and Innovation</h3>
+      <p class="part-description">
+        Places financial innovation within polycrisis, demographics, pensions,
+        geopolitical fragmentation, industrial revolutions, superintelligence,
+        sustainability, global power, and stewardship.
+      </p>
       <ul class="chapter-list">
-        <li>Global Resilience and the Polycrisis</li>
-        <li>The Demographic Reversal</li>
-        <li>The Pension Challenge</li>
-        <li>The Fragmented Frontier</li>
-        <li>The Four Industrial Revolutions</li>
-        <li>The Road to Superintelligence</li>
-        <li>The Finance of Sustainability</li>
-        <li>The New Global Balance</li>
-        <li>Capstone Lessons: Financial Virtue & Moral Responsibility</li>
+        <li>41 · Global Resilience and the Polycrisis</li>
+        <li>42 · The Demographic Reversal</li>
+        <li>43 · The Pension Challenge</li>
+        <li>44 · The Fragmented Frontier</li>
+        <li>45–49 · Industrial Revolutions, Superintelligence, Sustainable Finance, Global Balance, Capstone Lessons</li>
       </ul>
-      <span class="part-link">Explore Part VI →</span>
-    </a>
+    </article>
 
   </div>
 </section>
 
-<section class="inside-section">
-  <div class="section-header">
-    <span class="section-number">§ 03</span>
-    <h2 class="section-title">Multi-Modal Learning Architecture</h2>
-    <div class="section-rule"></div>
+<section>
+  <div class="section-label">§ 03 · Multimodal Learning Architecture</div>
+
+  <h2 class="section-title">
+    The book is the hub. The resources make it deeper.
+  </h2>
+
+  <p class="section-intro">
+    Each chapter is readable as a self-contained essay, but the course is designed as
+    a layered learning ecosystem. A reader can move horizontally across the book or
+    vertically into companion resources depending on purpose, preparation, and desired depth.
+  </p>
+
+  <div class="learning-grid">
+
+    <div class="layer-card">
+      <div class="layer-label">Layer 01</div>
+      <h3 class="layer-title">Chapter</h3>
+      <p class="layer-copy">
+        The written chapter provides the full analytical argument, institutional context,
+        mechanism, and lessons for future finance.
+      </p>
+    </div>
+
+    <div class="layer-card">
+      <div class="layer-label">Layer 02</div>
+      <h3 class="layer-title">Source Paper</h3>
+      <p class="layer-copy">
+        The source paper gives the deeper research foundation behind the chapter and
+        supports more advanced engagement.
+      </p>
+    </div>
+
+    <div class="layer-card">
+      <div class="layer-label">Layer 03</div>
+      <h3 class="layer-title">Deck</h3>
+      <p class="layer-copy">
+        The deck compresses the topic into visual structure, reviewable concepts,
+        and classroom-ready teaching points.
+      </p>
+    </div>
+
+    <div class="layer-card">
+      <div class="layer-label">Layer 04</div>
+      <h3 class="layer-title">Podcast</h3>
+      <p class="layer-copy">
+        The podcast provides a conversational entry point and reinforces the central
+        intuition of the chapter.
+      </p>
+    </div>
+
+    <div class="layer-card">
+      <div class="layer-label">Layer 05</div>
+      <h3 class="layer-title">Video</h3>
+      <p class="layer-copy">
+        The video adds guided explanation, pacing, emphasis, and interpretive support
+        for students who learn through listening and watching.
+      </p>
+    </div>
+
   </div>
-  <div class="inside-grid">
-    <div class="inside-item">
-      <div class="inside-icon">📖</div>
-      <div class="inside-count">41</div>
-      <div class="inside-label">Written Chapters</div>
+</section>
+
+<section class="pathways">
+  <div class="section-label">§ 04 · Recommended Learning Pathways</div>
+
+  <h2 class="section-title">
+    Different readers can enter through different professional needs.
+  </h2>
+
+  <p class="section-intro">
+    The full course may be read linearly, but it also supports modular pathways for
+    students, practitioners, policymakers, investors, risk professionals, and researchers.
+  </p>
+
+  <div class="pathways-grid">
+
+    <div class="pathway-card">
+      <h3 class="pathway-title">Institutional Architecture Pathway</h3>
+      <p class="pathway-copy">
+        For readers interested in law, governance, institutional design, market architecture,
+        contracts, standardization, and the foundations of financial systems.
+      </p>
     </div>
-    <div class="inside-item">
-      <div class="inside-icon">📊</div>
-      <div class="inside-count">41</div>
-      <div class="inside-label">Conceptual Decks</div>
+
+    <div class="pathway-card">
+      <h3 class="pathway-title">Inclusive Finance and Emerging Markets Pathway</h3>
+      <p class="pathway-copy">
+        For readers focused on incomplete markets, poverty finance, development finance,
+        microfinance, remittances, social enterprise, and financial inclusion.
+      </p>
     </div>
-    <div class="inside-item">
-      <div class="inside-icon">🎙️</div>
-      <div class="inside-count">41</div>
-      <div class="inside-label">Podcasts</div>
+
+    <div class="pathway-card">
+      <h3 class="pathway-title">Market Infrastructure and Payments Pathway</h3>
+      <p class="pathway-copy">
+        For readers interested in trading systems, settlement, payment rails, liquidity,
+        market microstructure, digital trust, and exchange architecture.
+      </p>
     </div>
-    <div class="inside-item">
-      <div class="inside-icon">🎬</div>
-      <div class="inside-count">41</div>
-      <div class="inside-label">Videos</div>
+
+    <div class="pathway-card">
+      <h3 class="pathway-title">Technology, AI, and Frontier Finance Pathway</h3>
+      <p class="pathway-copy">
+        For readers focused on artificial intelligence, blockchain, cyber risk, digital assets,
+        tokenization, computational infrastructure, Web3, and future financial systems.
+      </p>
     </div>
-    <div class="inside-item">
-      <div class="inside-icon">💻</div>
-      <div class="inside-count">Many</div>
-      <div class="inside-label">Colab Notebooks</div>
-    </div>
-    <div class="inside-item">
-      <div class="inside-icon">🌍</div>
-      <div class="inside-count">2</div>
-      <div class="inside-label">Perspectives</div>
-    </div>
-    <div class="inside-item">
-      <div class="inside-icon">🏛️</div>
-      <div class="inside-count">6</div>
-      <div class="inside-label">Parts</div>
-    </div>
-    <div class="inside-item">
-      <div class="inside-icon">🎓</div>
-      <div class="inside-count">PhD</div>
-      <div class="inside-label">Level</div>
+
+  </div>
+</section>
+
+<section>
+  <div class="section-label">§ 05 · Governance and Stewardship</div>
+
+  <h2 class="section-title">
+    Financial innovation is never morally neutral.
+  </h2>
+
+  <p class="section-intro">
+    The course treats governance as internal to innovation, not as an appendix after invention.
+    A financial system can widen opportunity, deepen markets, and support resilience; it can
+    also create opacity, exclusion, fragility, over-automation, extraction, or systemic dependence.
+  </p>
+
+  <div class="governance-box">
+    <h3>The core discipline</h3>
+
+    <p>
+      Students are trained to ask whether an innovation solves a real problem, how it works,
+      who benefits, who bears risk, whether it can scale responsibly, what new fragilities it
+      creates, and how it must be improved after stress. The purpose is not to celebrate novelty.
+      The purpose is to develop judgment.
+    </p>
+
+    <div class="governance-list">
+      <div class="gov-item">Explain by mechanism</div>
+      <div class="gov-item">Interpret technology institutionally</div>
+      <div class="gov-item">Make risk visible</div>
+      <div class="gov-item">Evaluate access and exclusion</div>
+      <div class="gov-item">Improve after stress</div>
+      <div class="gov-item">Treat invention as stewardship</div>
     </div>
   </div>
 </section>
 
-<section class="for-whom">
-  <div class="section-header">
-    <span class="section-number">§ 04</span>
-    <h2 class="section-title">Who This Course Serves</h2>
-    <div class="section-rule"></div>
-  </div>
-  <div class="profiles-grid">
-    <div class="profile-card">
-      <div class="profile-number">1</div>
-      <div class="profile-role">Advanced Researchers</div>
-      <p class="profile-desc">Scholars and PhD students seeking a rigorous, comprehensive framework for understanding financial innovation as an intellectual discipline—from institutional architecture to cryptographic frontiers to AI governance.</p>
-    </div>
-    <div class="profile-card">
-      <div class="profile-number">2</div>
-      <div class="profile-role">Practitioners & Innovators</div>
-      <p class="profile-desc">Professionals building financial systems who need conceptual depth alongside practical implementation guidance. From fintech founders to central bankers to policy designers.</p>
-    </div>
-    <div class="profile-card">
-      <div class="profile-number">3</div>
-      <div class="profile-role">Cross-Disciplinary Thinkers</div>
-      <p class="profile-desc">Anyone seeking to understand how finance, technology, institutions, and human values intersect—and how innovation can serve both developed and developing nations.</p>
-    </div>
+<section class="cta">
+  <h2 class="cta-title">
+    Begin with the book. Go deeper through the resources.
+  </h2>
+
+  <p class="cta-copy">
+    Read the chapter for the full argument, use the deck for compression, listen to
+    the podcast for conceptual reinforcement, and watch the video for guided explanation.
+    The Master Resource Index turns the book into a multimodal course hub.
+  </p>
+
+  <div class="cta-actions">
+    <a class="btn-primary" href="https://github.com/alexdibol/books/releases/download/book-financial_innovation-v01/BOOK_FINANCIAL_INNOVATION_IN_EMERGING_MARKETS.pdf" target="_blank" rel="noopener">
+      Download PDF →
+    </a>
+
+    <a class="btn-secondary" href="https://github.com/alexdibol/books/releases/tag/book-financial_innovation-v01" target="_blank" rel="noopener">
+      Open Release →
+    </a>
   </div>
 </section>
 
-<section class="cta-section">
-  <div class="cta-label">41 Chapters · Multi-Modal Learning · Developed & Developing World Perspectives</div>
-  <h2 class="cta-headline">Finance is not a closed specialty.<br>It is a living architecture through which<br>societies confront the future.</h2>
-  <p class="cta-sub">Discover. Implement. Improve.</p>
-  <div class="cta-buttons">
-    <a href="#" class="btn-primary">Access All Course Materials →</a>
-    <a href="#" class="btn-secondary">Download Syllabus</a>
-  </div>
-</section>
+</main>
 
-<footer>
-  <span class="footer-brand">Financial Innovation</span>
-  <span class="footer-note">© 2026 Alejandro Reynoso · PhD-Level Research · Original Scholarship · Multi-Modal Teaching Architecture</span>
-  <a href="#" class="footer-link">View GitHub Repository →</a>
+<footer class="footer">
+  <div>© 2026 Alejandro Reynoso</div>
+  <div>Readings in Financial Innovation · Master of Finance · Judge Business School, Cambridge</div>
 </footer>
 
 </body>
