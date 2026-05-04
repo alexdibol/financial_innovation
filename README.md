@@ -172,12 +172,7 @@ The first part establishes that durable innovation depends on institutions, lega
 
 It argues that financial innovation is not primarily a race toward novelty. It is the disciplined creation of new ways to organize trust, capital, information, incentives, enforceable commitments, and institutional possibility.
 
-This part includes:
-
-1. Frameworks for Financial Innovation  
-2. Innovation in Finance is always about Institutions  
-3. Where ideas come from  
-4. ISDA: Legal Architecture as Financial Innovation  
+This part includes foundational discussions of financial-innovation frameworks, institutional architecture, the origin of ideas, and legal design through the ISDA Master Agreement.
 
 The central lesson is that finance does not innovate only through products. It innovates through institutions, contracts, standards, organizational design, and rules of coordination.
 
@@ -191,17 +186,7 @@ The second part examines how innovation responds to exclusion, scarcity, weak in
 
 This is where innovation becomes most urgent because existing arrangements leave people partially served, poorly protected, or entirely excluded. Incomplete markets show that financial innovation is not a luxury of advanced economies. It is often a necessity of survival, inclusion, and institutional adaptation.
 
-This part includes:
-
-5. The Mechanics of Inflation Indexation  
-6. Agentic Policy Design in Emerging Markets  
-7. Asset Securitization in Incomplete Markets  
-8. AI-Driven IPO Prospectus Automation  
-9. Social Enterprises  
-10. Grameen Bank: Microfinance and Social Business  
-11. AI for Financial Inclusion  
-12. Remittances and Financial Innovation  
-13. Strategic Patience and Financial Innovation  
+This part includes discussions of inflation indexation, agentic policy design, securitization in incomplete markets, IPO prospectus automation, social enterprises, microfinance, AI for financial inclusion, remittances, and strategic patience.
 
 The central lesson is that innovation becomes most consequential when it widens access, protects dignity, lowers friction, strengthens policy reasoning, and converts exclusion into participation.
 
@@ -215,19 +200,7 @@ The third part studies the hidden infrastructures that allow value, securities, 
 
 Markets do not work simply because buyers and sellers exist. They work because claims can be recorded, messages can be standardized, settlement can be coordinated, liquidity can be discovered, and payment obligations can move through reliable systems.
 
-This part includes:
-
-14. The American Depositary Receipts  
-15. M-PESA from Telecom to Payments  
-16. PayPal and Digital Trust  
-17. The SWIFT Payment System  
-18. Mexico’s First Hedge Fund  
-19. Constellations of Agents in Hedge Fund Design  
-20. High-Frequency Trading  
-21. Game Theory in Finance  
-22. The Invention of the Credit Card  
-23. Dark Pools and Hidden Liquidity  
-24. Online Payment Systems  
+This part includes discussions of depositary receipts, mobile money, digital trust, payment messaging, hedge-fund formation, agentic hedge-fund design, high-frequency trading, game theory, credit cards, dark pools, and online payment systems.
 
 These chapters show that some of the most powerful innovations in finance become invisible once they succeed. A payment clears. A card is accepted. A message is routed. A foreign security becomes investable. A trade executes in milliseconds. A mobile phone becomes a wallet.
 
@@ -241,15 +214,7 @@ The fourth part explores cryptography, blockchain, tokenization, Web3, and digit
 
 Here, abstraction becomes infrastructure. Cryptography becomes a method of organizing trust. Blockchain becomes a way to record state and coordinate transactions. Tokenization asks how claims on real and financial assets can become more divisible, programmable, transferable, and auditable.
 
-This part includes:
-
-25. Cryptographic Architecture as Innovation  
-26. The Origin of Bitcoin  
-27. Blockchain Architecture  
-28. Blockchain Infrastructure  
-29. Asset Tokenization  
-30. AI-Mazonia NaturePass  
-31. Web3 as Financial Re-Architecture  
+This part includes discussions of cryptographic architecture, Bitcoin, blockchain architecture and infrastructure, asset tokenization, AI-Mazonia NaturePass, and Web3 as financial re-architecture.
 
 The central lesson is that mathematics and code can expand the design space of finance, but only when they are connected to governance, legal meaning, real assets, social purpose, and institutional usability.
 
@@ -261,17 +226,7 @@ The fifth part treats artificial intelligence as business infrastructure, workfl
 
 AI is not treated merely as a model family or productivity tool. It is treated as a new operating substrate for firms, markets, institutions, and societies.
 
-This part includes:
-
-32. AI as Business Infrastructure  
-33. CPUs, GPUs, and AI Factories  
-34. From Self-Driving Cars to AI Finance  
-35. The New Operating Grammar of AI Systems  
-36. Frontier Cyber-Strategic Risk  
-37. Why AI Ventures Fail  
-38. The Macroeconomics of AI  
-39. The AI Layoff Trap  
-40. AI and the Moral Condition of Society  
+This part includes discussions of AI as business infrastructure, CPUs and GPUs, AI factories, self-driving systems, AI finance, the operating grammar of AI systems, cyber-strategic risk, AI venture failure, AI macroeconomics, labor displacement, and the moral condition of society.
 
 The central lesson is that AI must be governed as capability, not worshipped as magic. In finance, AI can support advice, risk analysis, compliance, fraud detection, trading, documentation, and strategic decision-making. But it can also amplify fragility, opacity, labor displacement, cyber exposure, and overconfidence.
 
@@ -285,77 +240,11 @@ The final part places financial innovation within polycrisis, demographics, pens
 
 Financial innovation does not occur in a vacuum. It takes place inside a world shaped by demographics, geopolitics, climate stress, technological acceleration, institutional fragmentation, industrial transformation, and shifting power.
 
-This part includes:
-
-41. Global Resilience and the Polycrisis  
-42. The Demographic Reversal  
-43. The Pension Challenge  
-44. The Fragmented Frontier  
-45. The Four Industrial Revolutions  
-46. The Road to Superintelligence  
-47. Sustainable Finance  
-48. The New Global Balance  
-49. Capstone Lessons  
+This part includes discussions of global resilience, demographic reversal, pensions, fragmentation, industrial revolutions, superintelligence, sustainable finance, global balance, and capstone lessons.
 
 The central lesson is that finance must be understood as part of civilization’s response to the future. Aging societies need pension systems. Climate stress requires sustainable finance. Fragmented globalization requires resilient infrastructure. Superintelligence requires governance imagination. New global balances require institutional adaptation.
 
 The book ends by insisting that financial innovation must be judged not only by efficiency, scale, or profitability, but by stewardship.
-
----
-
-## Chapter List
-
-The book contains 49 chapters:
-
-1. Frameworks for Financial Innovation  
-2. Innovation in Finance is always about Institutions  
-3. Where ideas come from  
-4. ISDA: Legal Architecture as Financial Innovation  
-5. The Mechanics of Inflation Indexation  
-6. Agentic Policy Design in Emerging Markets  
-7. Asset Securitization in Incomplete Markets  
-8. AI-Driven IPO Prospectus Automation  
-9. Social Enterprises  
-10. Grameen Bank: Microfinance and Social Business  
-11. AI for Financial Inclusion  
-12. Remittances and Financial Innovation  
-13. Strategic Patience and Financial Innovation  
-14. The American Depositary Receipts  
-15. M-PESA from Telecom to Payments  
-16. PayPal and Digital Trust  
-17. The SWIFT Payment System  
-18. Mexico’s First Hedge Fund  
-19. Constellations of Agents in Hedge Fund Design  
-20. High-Frequency Trading  
-21. Game Theory in Finance  
-22. The Invention of the Credit Card  
-23. Dark Pools and Hidden Liquidity  
-24. Online Payment Systems  
-25. Cryptographic Architecture as Innovation  
-26. The Origin of Bitcoin  
-27. Blockchain Architecture  
-28. Blockchain Infrastructure  
-29. Asset Tokenization  
-30. AI-Mazonia NaturePass  
-31. Web3 as Financial Re-Architecture  
-32. AI as Business Infrastructure  
-33. CPUs, GPUs, and AI Factories  
-34. From Self-Driving Cars to AI Finance  
-35. The New Operating Grammar of AI Systems  
-36. Frontier Cyber-Strategic Risk  
-37. Why AI Ventures Fail  
-38. The Macroeconomics of AI  
-39. The AI Layoff Trap  
-40. AI and the Moral Condition of Society  
-41. Global Resilience and the Polycrisis  
-42. The Demographic Reversal  
-43. The Pension Challenge  
-44. The Fragmented Frontier  
-45. The Four Industrial Revolutions  
-46. The Road to Superintelligence  
-47. Sustainable Finance  
-48. The New Global Balance  
-49. Capstone Lessons  
 
 ---
 
@@ -631,3 +520,4 @@ No part of this manuscript or repository may be reproduced, stored in a retrieva
 
 ```text
 Reynoso, Alejandro. Readings in Financial Innovation: A Course of the Master of Finance Program, Judge Business School, Cambridge. May 4, 2026.
+```
